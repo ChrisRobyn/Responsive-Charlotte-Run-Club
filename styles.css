@@ -1,0 +1,112 @@
+/* Variables */
+:root {
+    --brand-1-a: #45A29E;
+    --brand-2-a: #66FCF1;
+    --brand-3-a: #C5C6C7;
+    --brand-4-a: #1F2833;
+    --brand-5-a: #0B0C10;
+    --brand-font: "DM Sans", sans-serif;
+}
+
+/* Universal Styles */
+body {
+    background-color: var(--brand-5-a);
+    color: var(--brand-3-a);
+    font-family: var(--brand-font);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: var(--brand-2-a);
+}
+
+a:hover {
+    color: var(--brand-3-a)
+}
+
+.wrapper {
+    display: grid;
+    position: relative;
+    margin: auto;
+    grid-template: repeat(12, 1fr) / repeat(6, 1fr);
+    background-image: url(images/CLT\ Hero.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    row-gap: 1.5rem;
+    font-family: var(--brand-font);
+  }
+
+  /* Logo */
+ header {
+    grid-area: 1 / 1 / 3 / 7;
+    align-content: center;
+ }
+ 
+ .logo {
+    display: grid;
+    justify-content: center;
+ }
+
+.logo img {
+    height: 15rem;
+    margin-top: 1rem;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    width: 100%;
+    grid-area: 3 / 1 / 4 / 7;
+}
+
+nav ul {
+    display: inline-flex;
+    gap: 10rem;
+    font-family: var(--brand-font);
+    font-size: 1.5rem;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+/* Run Info */
+.run-info-header {
+    grid-area: 8 / 1 / 9 / 7;
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--brand-3-a);
+}
+
+.run-container {
+    grid-area: 9 / 1 / 12 / 7 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.run-info-container {
+    display: flex;
+    color: var(--brand-3-a);
+    text-align: center;
+    gap: 4rem;
+}
+
+.run-info-container h3 {
+    font-size: 1.5rem;
+    color: var(--brand-3-a);
+}
+
+.run-info img{
+    height: 18rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact Info */
