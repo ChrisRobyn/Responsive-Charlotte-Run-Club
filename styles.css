@@ -32,45 +32,12 @@ a:hover {
   display: grid;
   gap: 20px;
   grid-template-areas:
-    "header"
-    "nav"
-    "hero"
-    "runs"
-    "contact"
-    "footer";
-  }
-
-  @media only screen and (min-width: 500px) {
-    .wrapper {
-      grid-template-columns: 1fr 3fr;
-      grid-template-areas:
-        "header  header"
-        "nav     nav"
-        "hero hero"
-        "runs    runs"
-        "contact   contact"
-        "footer      footer";
-    }
-    nav ul {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
-  @media only screen and (min-width: 700px) {
-    .wrapper {
-      grid-template-columns: 1fr 4fr 1fr;
-      grid-template-areas:
-        "header header  header"
-        "nav    nav       nav"
-        "hero hero       hero"
-        "runs runs runs"
-        "contact contact contact"
-        "footer footer  footer";
-    }
-    nav ul {
-      flex-direction: column;
-    }
+    "header header header"
+    "nav nav nav"
+    "hero hero hero"
+    "runs runs runs"
+    "contact contact contact"
+    "footer footer footer";
   }
 
 /* Header */
@@ -117,10 +84,47 @@ a:hover {
   width: 100%;
 }
 
+/* Running Section */
 .main-run {
   grid-area: runs;
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--brand-font);
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 2;
+  gap: 30px;
 }
 
+.main-run h1 {
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+.run-info-card {
+  grid-row-start: 2;
+  font-family: var(--brand-font);
+  background-color: var(--brand-1-a);
+  color: var(--brand-4-a);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.run-info-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.run-info-card p {
+  font-size: 1.5rem;
+}
+
+.run-info-card img {
+  height: 20rem;
+}
+
+/* Contact Info */
 .main-contact {
   grid-area: contact;
 }
