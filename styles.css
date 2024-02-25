@@ -36,8 +36,39 @@ a:hover {
     "nav nav nav"
     "hero hero hero"
     "runs runs runs"
+    "about about about"
     "contact contact contact"
     "footer footer footer";
+  }
+
+  @media only screen and (max-width: 768px) {
+    .wrapper {
+      grid-template-areas: 
+      "header header"
+      "nav nav"
+      "hero hero"
+      "hero hero"
+      "hero hero"
+      "runs runs"
+      "about about"
+      "contact contact"
+      "footer footer";
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    .wrapper {
+      grid-template-areas: 
+      "header"
+      "nav"
+      "hero"
+      "hero"
+      "hero"
+      "runs"
+      "about"
+      "contact"
+      "footer";
+    }
   }
 
 /* Header */
@@ -51,6 +82,19 @@ a:hover {
   height: 20rem;
 }
 
+@media screen and (max-width: 768px) {
+  .main-head img {
+    height: 15rem;
+  }
+  
+}
+
+@media only screen and (max-width: 430px){
+  .main-head img {
+    height: 7.5rem;
+  }
+}
+
 /* Navigation */
 .main-nav {
   grid-area: nav;
@@ -60,7 +104,7 @@ a:hover {
 
 .main-nav ul{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   font-family: var(--brand-font);
   font-size: 1.5rem;
   gap: 5rem;
@@ -70,6 +114,17 @@ a:hover {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 430px){
+  .main-nav ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Hero Image */
 .hero-image {
  grid-area: hero;
  display: grid;
@@ -82,6 +137,27 @@ a:hover {
   grid-column-start: 1;
   grid-column-end: 4;
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-image {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -20rem;
+  }
+
+  .hero-image img {
+    height: 645px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .hero-image {
+    margin-top: 0;
+  }
+
+  .hero-image img {
+    height: auto;
+  }
 }
 
 /* Running Section */
@@ -124,12 +200,107 @@ a:hover {
   height: 20rem;
 }
 
+@media screen and (max-width: 768px) {
+  .main-run {
+    grid-template-columns: 1;
+    grid-template-rows: 4;
+  }
+
+  .card-one {
+    grid-row-start: 2;
+  }
+
+  .card-two {
+    grid-row-start: 3;
+  }
+
+  .card-three {
+    grid-row-start: 4;
+  }
+
+  .main-run h1 {
+    grid-column-start: 1;
+  }
+
+  @media only screen and (max-width: 430px){
+    .run-info-card img {
+      height: 15rem;
+    }
+  }
+  
+}
+
+/* About Us */
+.main-about {
+  grid-area: about;
+  background-color: var(--brand-3-a);
+  color: #1F2833;
+  font-family: var(--brand-font);
+  font-size: 1.5rem;
+  padding: 60px;
+  text-align: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.main-about h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main-about p {
+  margin-left: 100px;
+  margin-right: 100px;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main-about {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .main-about p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* Contact Info */
 .main-contact {
   grid-area: contact;
+  display: grid;
+  text-align: center;
+  background-color: var(--brand-4-a);
+  color: var(--brand-3-a);
+  font-size: 1.5rem;
+  font-family: var(--brand-font);
+  height: 14rem;
+  align-content: center;
 }
 
+.main-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main-contact h3 {
+  margin-bottom: 1rem;
+}
+
+/* Footer */
 .main-footer {
+  display: grid;
   grid-area: footer;
+  background-color: #45A29E;
+  color: var(--brand-5-a);
+  font-family: var(--brand-font);
+  height: 4rem;
+  padding-left: 1.5rem;
+  align-content: center;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
